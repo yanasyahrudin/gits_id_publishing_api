@@ -1,0 +1,616 @@
+{
+	"info": {
+		"_postman_id": "be9d2ff8-2f7e-4c84-a2b8-f9ffbf356b6d",
+		"name": "My Collection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48739874",
+		"_collection_link": "https://yanasyahrudin-6721773.postman.co/workspace/Yana-Syahrudin's-Workspace~5b3f1c5e-cf1d-48dc-834c-892420bb8a73/collection/48739874-be9d2ff8-2f7e-4c84-a2b8-f9ffbf356b6d?action=share&source=collection_link&creator=48739874"
+	},
+	"item": [
+		{
+			"name": "GITS_ID_Publisher",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"username\",\r\n  \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"yanasyahrudin\",\r\n    \"password\" : \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "book",
+					"item": [
+						{
+							"name": "get_all_books",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMzMDQ3LCJleHAiOjE3NTg3MzY2NDd9.ISODiaZvYM3AErYJTIq3DkSLsOEsjzqi3omqD0vtA0Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_book",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMzMDQ3LCJleHAiOjE3NTg3MzY2NDd9.ISODiaZvYM3AErYJTIq3DkSLsOEsjzqi3omqD0vtA0Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/books/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_book_by_id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMzMDQ3LCJleHAiOjE3NTg3MzY2NDd9.ISODiaZvYM3AErYJTIq3DkSLsOEsjzqi3omqD0vtA0Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/books/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add_new_book",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMzMDQ3LCJleHAiOjE3NTg3MzY2NDd9.ISODiaZvYM3AErYJTIq3DkSLsOEsjzqi3omqD0vtA0Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Belajar Node.js\",\r\n  \"authorId\": 5,\r\n  \"publisherId\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit_book",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMzMDQ3LCJleHAiOjE3NTg3MzY2NDd9.ISODiaZvYM3AErYJTIq3DkSLsOEsjzqi3omqD0vtA0Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Belajar Node.js Lanjutan\",\r\n  \"authorId\": 5,\r\n  \"publisherId\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/books/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"books",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "author",
+					"item": [
+						{
+							"name": "author",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMxMzk1LCJleHAiOjE3NTg3MzQ5OTV9.oiwPpVv2LGiOs_rNpN00rpzsLMOeJ0wRiiOohijHyZ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_author",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMxMzk1LCJleHAiOjE3NTg3MzQ5OTV9.oiwPpVv2LGiOs_rNpN00rpzsLMOeJ0wRiiOohijHyZ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/authors/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"authors",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add_new_author",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMxMzk1LCJleHAiOjE3NTg3MzQ5OTV9.oiwPpVv2LGiOs_rNpN00rpzsLMOeJ0wRiiOohijHyZ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Author Baru\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit_author",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMxMzk1LCJleHAiOjE3NTg3MzQ5OTV9.oiwPpVv2LGiOs_rNpN00rpzsLMOeJ0wRiiOohijHyZ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Author Update\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/authors/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"authors",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_author_by_id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzY1OTgxLCJleHAiOjE3NTg3Njk1ODF9.n7MmYFHwG8mqhpHcvQpn24m5vFGduxjkd7aGdGmDMa8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/authors/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"authors",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "publisher",
+					"item": [
+						{
+							"name": "publisher",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMxMzk1LCJleHAiOjE3NTg3MzQ5OTV9.oiwPpVv2LGiOs_rNpN00rpzsLMOeJ0wRiiOohijHyZ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/publishers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"publishers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_publisher",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMxMzk1LCJleHAiOjE3NTg3MzQ5OTV9.oiwPpVv2LGiOs_rNpN00rpzsLMOeJ0wRiiOohijHyZ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/publishers/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"publishers",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add_new_publisher",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMxMzk1LCJleHAiOjE3NTg3MzQ5OTV9.oiwPpVv2LGiOs_rNpN00rpzsLMOeJ0wRiiOohijHyZ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Author Baru\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/publishers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"publishers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit_publisher",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzMxMzk1LCJleHAiOjE3NTg3MzQ5OTV9.oiwPpVv2LGiOs_rNpN00rpzsLMOeJ0wRiiOohijHyZ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Publisher Update\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/publishers/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"publishers",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_publisher_by_id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ5YW5hc3lhaHJ1ZGluIiwiaWF0IjoxNzU4NzY1OTgxLCJleHAiOjE3NTg3Njk1ODF9.n7MmYFHwG8mqhpHcvQpn24m5vFGduxjkd7aGdGmDMa8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/publishers/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"publishers",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
