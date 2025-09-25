@@ -110,6 +110,38 @@ Login returns a JWT token. All other API endpoints (authors, publishers, books) 
 Authorization: Bearer <token>
 ```
 
+## Unit tests
+
+This project includes unit tests using Jest and Supertest. Tests are placed under the test/ directory (example: test/auth.jest.js). The test runner and configuration are declared in package.json.
+
+Run all tests:
+```bash
+npm test
+```
+
+Run a single test file:
+```
+npx jest test/auth.jest.js
+```
+
+Notes:
+- Some tests mock the database/models and cryptography/token libraries (see test/auth.jest.js), so they do not require a running database.
+- Tests that exercise authentication may require the JWT_SECRET environment variable. You can set it inline before running tests:
+  - Unix/macOS:
+  ```bash
+  JWT_SECRET=test-secret npm test
+  ```
+  - Windows (PowerShell):
+  ```
+  $env:JWT_SECRET='test-secret'; npm test
+  ```
+- Tests use the route handlers defined in routes/auth.js and may mock bcryptjs, jsonwebtoken, and the Sequelize models.
+
+You can also run Jest with coverage reporting:
+```bash
+npx jest --coverage
+```
+
 ## API Endpoints
 
 Base path: `/api`
